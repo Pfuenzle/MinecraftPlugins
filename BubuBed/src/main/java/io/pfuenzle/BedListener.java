@@ -13,13 +13,14 @@ public class BedListener implements Listener {
     {
         Player player = event.getPlayer();
 
-        if(event.getBedEnterResult() != PlayerBedEnterEvent.BedEnterResult.OK) //Falls Spieler in Bett steigen konnte
+        if(event.isCancelled()) //Falls Spieler nicht schlafen gehen kann
             return;
 
         Bukkit.broadcastMessage("Spieler " + player.getDisplayName() + " ist schlafen gegangen");
 
-        for(World world : Bukkit.getWorlds()) //Setze Zeit in allen Welten auf 0
-            world.setTime(0);
+        World world = Bukkit.getWorld("world"); //Setze Zeit in allen Welten auf 0
+        world.setTime(0);
+
 
         event.getPlayer().eject(); //Schmeiße Spieler aus Bett
     }

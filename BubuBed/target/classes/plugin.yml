@@ -1,5 +1,5 @@
 name: BubuBed
-version: 1.0
+version: 1.2
 main: io.pfuenzle.bububed
 api-version: 1.13
 load: STARTUP
