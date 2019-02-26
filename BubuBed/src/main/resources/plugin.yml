@@ -1,0 +1,7 @@
+name: BubuBed
+version: ${project.version}
+main: io.pfuenzle.bububed
+api-version: 1.13
+load: STARTUP
+description: Überspringt die Nacht auch falls nur ein Spieler im Bett liegt.
+author: Pfuenzle
